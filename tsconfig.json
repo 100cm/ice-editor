@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ice-editor": [
+        "dist/ice-editor"
+      ],
+      "ice-editor/*": [
+        "dist/ice-editor/*"
+      ]
+    }
   }
 }

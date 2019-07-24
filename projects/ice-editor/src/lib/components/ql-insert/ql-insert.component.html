@@ -1,0 +1,20 @@
+<span class="ql-formats">
+<button type="button" #button class="ql-inserts" data-label="插入" (click)="setShow()">
+</button>
+<span class="ql-inserts-label" [class.ql-expanded]="show" (click)="setShow()">
+  <button class="ql-image" data-label="上传图片"></button>
+  <button class="ql-code-block" data-label="代码块"></button>
+  <button type="button" class="ql-blockquote" data-label="引用"> </button>
+  <button type="button" data-label="超链接" class="ql-link"></button>
+  <ql-attachments></ql-attachments>
+  <select class="ql-media ql-hover-picker">
+    <option value="online-media">输入地址</option>
+   <option value="upload-media">上传</option>
+  </select>
+  <select class="ql-sheet ql-color-picker ql-hover-picker" data-label="表格">
+
+  </select>
+</span>
+</span>
+
+

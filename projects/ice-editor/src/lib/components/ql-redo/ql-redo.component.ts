@@ -1,0 +1,27 @@
+import {Component, OnInit} from '@angular/core';
+import {IceEditorComponent} from '../../ice-editor.component';
+
+@Component({
+  selector: 'ql-redo',
+  template: `
+    <button (click)="redo()" type="button" class="ql-redo">
+      <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           x="0px" y="0px" viewBox="0 0 30 27" style="enable-background:new 0 0 30 27" xml:space="preserve"> <desc>Created with Sketch.</desc>
+        <g
+          id="Page-1"> <g id="重做"> <path id="Combined-Shape" d="M16.131,15.012L14.492,17h7.5l-1.727-7l-1.58,1.916
+			c-0.934-0.751-2.855-1.802-6.293-1.802c-5.348,0-7.4,5.432-7.4,5.432s3.067-3.501,6.492-3.501
+			C14.047,12.044,15.541,14.018,16.131,15.012z"></path> </g> </g> </svg>
+    </button>`,
+})
+export class QlRedoComponent implements OnInit {
+
+  constructor(private editor: IceEditorComponent) {
+  }
+
+  ngOnInit() {
+  }
+
+  redo(): void {
+    this.editor.quill.history.undo();
+  }
+}

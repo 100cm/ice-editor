@@ -118,6 +118,41 @@
           }
         }
       }
+    },
+    "ice-editor": {
+      "projectType": "library",
+      "root": "projects/ice-editor",
+      "sourceRoot": "projects/ice-editor/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ice-editor/tsconfig.lib.json",
+            "project": "projects/ice-editor/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ice-editor/src/test.ts",
+            "tsConfig": "projects/ice-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/ice-editor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ice-editor/tsconfig.lib.json",
+              "projects/ice-editor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "blade-quill"
 }
